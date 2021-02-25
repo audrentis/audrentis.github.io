@@ -1,0 +1,46 @@
+/*
+PANTONE 178C
+PANTONE 7685C
+PANTONE 7604C 
+*/
+body{
+    background-color: #E4D5D3;
+    background-position: center;
+    align-content: center;
+    font-size: 18pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 30pt;
+    padding-right:30pt;
+    color:#FF585D;
+}
+.menuguide{
+    background-color: #2C5697;
+    font-size: 20pt;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    font-family: monospace;
+}
+.guidebutton{
+    width: 300px;
+    background-color: #2C5697;
+    color: #E4D5D3;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom:25px;
+    font-family: monospace;
+    font-size: 20pt;
+    text-decoration: none;
+    transition-duration: 0.2s;
+    display:inline-block;
+}
+.guidebutton:hover{
+    background-color: #FF585D;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+footer{
+    font-family: monospace;
+    font-size: 14pt;
+    color:#2C5697;
+}

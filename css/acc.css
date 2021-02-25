@@ -3,13 +3,6 @@ PANTONE 178C
 PANTONE 7685C
 PANTONE 7604C 
 */
-h1{
-color:#FF585D;
-font-family:Verdana, Geneva, Tahoma, sans-serif;
-font-size: 24pt;
-padding-top: 30px;
-padding-bottom: 30px;
-}
 body{
     background-color: #E4D5D3;
     background-position: center;
@@ -18,11 +11,7 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding-left: 30pt;
     padding-right:30pt;
-
-}
-footer{
-    font-family: monospace;
-    font-size: 14pt;
+    color:#FF585D;
 }
 .menuguide{
     background-color: #2C5697;
@@ -33,7 +22,7 @@ footer{
     font-family: monospace;
 }
 .guidebutton{
-    width: 400px;
+    width: 300px;
     background-color: #2C5697;
     color: #E4D5D3;
     text-align: center;
@@ -49,4 +38,9 @@ footer{
     background-color: #FF585D;
     padding-bottom: 25px;
     padding-top: 25px;
+}
+footer{
+    font-family: monospace;
+    font-size: 14pt;
+    color:#2C5697;
 }
