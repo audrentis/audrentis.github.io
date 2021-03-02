@@ -9,13 +9,7 @@ Pantone 7620 C (183 49 44)   | (B7312C) | (0 94 86 16) \\ accents
 
 
 */
-h1{
-color:#1D4289;
-font-family:Verdana, Geneva, Tahoma, sans-serif;
-font-size: 24pt;
-padding-top: 30px;
-padding-bottom: 30px;
-}
+
 body{
     background-color: #EACBBB;
     background-position: center;
@@ -47,6 +41,7 @@ footer{
     text-align: center;
     padding-top: 25px;
     padding-bottom:25px;
+    border-radius: 5px;
     font-family: monospace;
     font-size: 20pt;
     text-decoration: none;
