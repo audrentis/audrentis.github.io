@@ -9,18 +9,20 @@ Pantone 7620 C (183 49 44)   | (B7312C) | (0 94 86 16) \\ accents
 
 
 */
+
+/* element formatting -------------------------------------------------- */
 h1{
     font-size: 24pt;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:#1D4289;
     padding-left: 30pt;
     padding-right:30pt;
-    text-align: right;
+    text-align: left;
 }
 h5{
     font-size: 20pt;
     font-weight: bold;
-    text-align:right;
+    text-align: left;
     padding-left: 30pt;
     padding-right:30pt;
     color:#1D4289;
@@ -42,6 +44,7 @@ footer{
     font-size: 14pt;
     color:#1D4289;
 }
+/* Classes ------------------------------------------------------------- */
 .menuguide{
     background-color: #EACBBB;
     font-size: 20pt;
@@ -69,4 +72,43 @@ footer{
     color: #EACBBB;
     padding-bottom: 25px;
     padding-top: 25px;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown:hover .dropcontent{
+    display:block;
+}
+.dropdown:hover .dropbutton{
+    background-color:#1D4289;
+}
+.dropbutton{
+    width: 300px;
+    background-color: #EACBBB;
+    color: #1D4289;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom:25px;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 20pt;
+    text-decoration: none;
+    transition-duration: 0.2s;
+    display:inline-block;
+}
+.dropcontent{ 
+    display: none;
+    position:absolute;
+    background-color:#1D4289;
+    color:#EACBBB;
+    min-width: 300px;
+    z-index: 1;
+}
+.droplinks{
+    color:#EACBBB;
+    padding: 16px 16px;
+    text-decoration: none;
+    display: block;
 }
