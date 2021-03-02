@@ -27,12 +27,13 @@ body{
     color:#1D4289;
 }
 footer{
+    text-align: right;
     font-family: monospace;
     font-size: 14pt;
     color:#1D4289;
 }
 .menuguide{
-    background-color: #1D4289;
+    background-color: #EACBBB;
     font-size: 20pt;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -54,6 +55,7 @@ footer{
 }
 .guidebutton:hover{
     background-color: #B7312C;
+    color: #EACBBB;
     padding-bottom: 25px;
     padding-top: 25px;
 }
