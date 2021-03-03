@@ -38,9 +38,13 @@ footer{
     font-family: monospace;
     font-size: 12pt;
     color:#1D4289;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
 }
 /* Classes ------------------------------------------------------------- */
 
+/* Places h1 with class "pgtitle" on center with accent background*/
 .pgtitle{
     text-align: center;
     background-color: #B7312C;
@@ -49,6 +53,7 @@ footer{
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 /* Navigation Bar -------- */
 .menuguide{
     background-color: #EACBBB;
@@ -78,7 +83,6 @@ footer{
     padding-bottom: 25px;
     padding-top: 25px;
 }
-
 .dropdown{
     position: relative;
     display: inline-block;
@@ -131,6 +135,7 @@ footer{
     color:#1D4289; 
     padding: 5%;
 }
+/* Sets position of button*/
 .loginbutton{
     background-color:#1D4289;
     color: #EACBBB;
@@ -142,6 +147,7 @@ footer{
     margin-left: 80%;
     
 }
+/* Places login page at center of page*/
 .logincontainera{
     display:table;
     height:100%;
