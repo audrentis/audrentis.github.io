@@ -4,15 +4,13 @@
     <head>
         <title>Account Services</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="https://audrentis.xyz/css/main.css" title="style" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/main.css" title="style" />
     </head>
 
     <body>
         <img src="LOGO.png"
             alt="logo">
-
-            <div class="menuguide">
-                <a href="https://audrentis.xyz/" class="guidebutton">Home</a>
 
                 <div class="menuguide">
                     <a href="index.html" class="guidebutton">Home</a>
@@ -48,9 +46,19 @@
                 </div>
 
 
-        <h1>My Account</h1>
-        <p>Please use the dropdown menu to either login or create your account, edit your account </p>
+        <h1 class="pgtitle">Account Services</h1>
         
+        <div class="logincontainera">
+        <div class="logincontainerb">
+            <form action="Account-Services.html" method="get" class="loginform">
+                <label for="user">Username:</label><br>
+                <input type="text" id="user" name="user"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br>
+                <input type="submit" value="Login" class="loginbutton">
+            </form>
+        </div>
+        </div>
         <footer>
             <p>
                 A project for IS 448<br/>

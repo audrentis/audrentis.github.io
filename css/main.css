@@ -23,15 +23,14 @@ h5{
     text-align: left;
     color:#1D4289;
 }
-
 body{
     background-color: #EACBBB;
     background-position: center;
     align-content: center;
     font-size: 18pt;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding-left: 30pt;
-    padding-right:30pt;
+    padding-left: 5%;
+    padding-right: 5%;
     color:#1D4289;
 }
 footer{
@@ -41,6 +40,16 @@ footer{
     color:#1D4289;
 }
 /* Classes ------------------------------------------------------------- */
+
+.pgtitle{
+    text-align: center;
+    background-color: #B7312C;
+    color: #EACBBB;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* Navigation Bar -------- */
 .menuguide{
     background-color: #EACBBB;
     font-size: 20pt;
@@ -113,4 +122,33 @@ footer{
     display: block;
     font-size: 16pt;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Acct Services Login form -------- */
+.loginform{
+    background-color: beige;
+    width: 600px;
+    color:#1D4289; 
+    padding: 5%;
+}
+.loginbutton{
+    background-color:#1D4289;
+    color: #EACBBB;
+    border-radius: 3px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom:2%;
+    margin-left: 80%;
+    
+}
+.logincontainera{
+    display:table;
+    height:100%;
+    margin: 0 auto;
+}
+.logincontainerb{
+    display: table-cell;
+    vertical-align: middle;
+    margin:0 auto;
 }
