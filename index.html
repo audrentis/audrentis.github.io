@@ -1,0 +1,140 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halo KB</title>
+    <link rel="stylesheet" href="Assets/style.css" />
+    <link rel="icon" type="image/x-icon" href="Assets/perilla.png" />
+  </head>
+
+  <body>
+    <script src="index.js"></script>
+    <svg style="display: none">
+      <filter id="liquid-refraction">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.01"
+          numOctaves="2"
+          result="noise"
+        />
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="noise"
+          scale="20"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        />
+      </filter>
+    </svg>
+    <main>
+      <header id="header">
+        <h1>Halo Knowledge Base</h1>
+        <p>The core of efficiency.</p>
+      </header>
+
+      <div class="pad"></div>
+
+      <div class="liquid-glass">
+        <h2>Pantone Guide</h2>
+
+        <h3>Primaries</h3>
+        <table>
+          <tr>
+            <td><img class="pantoneCard" src="Assets/2154C.jpeg" /></td>
+            <td><img class="pantoneCard" src="Assets/7741C.jpeg" /></td>
+            <td><img class="pantoneCard" src="Assets/655C.jpeg" /></td>
+          </tr>
+        </table>
+        <h3>Secondaries</h3>
+        <table>
+          <tr>
+            <td><img class="pantoneCard" src="Assets/312C.jpeg" /></td>
+            <td><img class="pantoneCard" src="Assets/186C.jpeg" /></td>
+            <td><img class="pantoneCard" src="Assets/656CP.jpeg" /></td>
+            <td><img class="pantoneCard" src="Assets/9081c_CG1c.jpg" /></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="sideBySide">
+        <div class="liquid-glass">
+          <h2>AI Usage and Limitations</h2>
+          <ul>
+            <li>AI Search would render category filter obselete </li>
+            <li>AI Search has built-in category filter but is not obvious</li>
+            <li>AI Chatbot is still available for asking direct questions</li>
+            <li>Search operates on Category Filter + keywords + tags</li>
+          </ul>
+        </div>
+
+        <div class="liquid-glass">
+          <h2>Design Language</h2>
+          <ul>
+            <li>Cool and fun, not maintainable without extensive CSS/JS Knowledge</li>
+            <li>Intended to showcase possible functionality & features more</li>
+            <li>Simplistic design, akin to existing template theme </li>
+            <li>Stick to true Pantone swatches for color theming</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="liquid-glass">
+        <h2>Tag Hierarchy</h2>
+        <p>d3 tree</p>
+      </div>
+
+      <div class="padB"></div>
+
+      <div class="liquid-glass">
+        <h2>Directory Structure</h2>
+        <p>d3 tree</p>
+      </div>
+
+      <div class="sideBySide">
+        <div class="liquid-glass">
+          <h2>Responsibilties</h2>
+          <table>
+            <td>
+              <ul>
+                <li>General site maintenance - Sophia & Evan</li>
+                <li>BV Marketplace - Sophia</li>
+                <li>CRM - Chris</li>
+                <li>EHR - Danny</li>
+                <li>Voyager - Mil</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>IT Help Desk</li>
+                <li>Remote Support/Vendors/Contacts - Evan</li>
+                <li>Software Guides/Docs - ?</li>
+                <li>Hardware Guides/Docs - ?</li>
+                <li>Okta SSO - ?</li>
+              </ul>
+            </td>
+          </table>
+        </div>
+
+        <div class="liquid-glass">
+          <h2>Timeline</h2>
+          <ul>
+            <li>Load Guides & Create Articles (Do not Publish)</li>
+            <li>Maintenance Period ~ 2 weeks (UI Buildout & Testing)</li>
+            <li>Publish Theme</li>
+            <li>Publish All Docs</li>
+            <li>IT Inform announcement</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="pad"></div>
+      <footer id="footer">
+        <span class="copyright"
+          >&copy; HaloKB. Design: <a href="audrentis.xyz">audrentis</a>.</span
+        >
+      </footer>
+    </main>
+  </body>
+</html>
