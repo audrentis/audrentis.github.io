@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        body {
+            background: RGB(0, 38, 87);
+background: linear-gradient(90deg,rgba(0, 38, 87, 1) 0%, rgba(68, 136, 67, 1) 50%, rgba(9, 147, 193, 1) 100%);
+font-family: Verdana, sans-serif;
+        }
+
+
+        .calcCard {
+            border-radius: 1em;
+            margin: auto;
+            padding: 1.5em;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            width: 33%;
+            height: 33%;
+            background-color: rgba(240, 255, 255, 0.25);
+            backdrop-filter: blur(24px) url(#liquid-refraction);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.74);
+        }
+
+        .titleCard {
+            display: grid;
+            text-align: center;
+            font-size: 1em;
+            color:whitesmoke;
+        }
+
+        .userEntry {
+            display: grid;
+        }
+
+        .uInput {
+            display: grid;
+            background-color: bisque;
+        }
+
+        .buttons {
+            display: flex;
+            gap: .25em;
+            justify-content: right;
+        }
+
+        .onGo {
+            background-color: #c2fbd7;
+            border-radius: 100px;
+            box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+            color: green;
+            cursor: pointer;
+            display: grid;
+            font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+            padding: 7px 10px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 250ms;
+            border: 0;
+            font-size: .75em;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .onGo:hover {
+            box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+            transform: scale(1.05) rotate(-1deg);
+        }
+
+
+        .onReset {
+            background-color: #fbc2c2;
+            border-radius: 100px;
+            box-shadow: rgba(187, 44, 44, 0.2) 0 -25px 18px -14px inset, rgba(187, 44, 44, .15) 0 1px 2px, rgba(187, 44, 44, .15) 0 2px 4px, rgba(187, 44, 44, .15) 0 4px 8px, rgba(187, 44, 44, .15) 0 8px 16px, rgba(187, 44, 44, .15) 0 16px 32px;
+            color: maroon;
+            cursor: pointer;
+            display: grid;
+            font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+            padding: 7px 10px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 250ms;
+            border: 0;
+            font-size: .75em;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .onReset:hover {
+            box-shadow: rgba(187, 44, 44, .35) 0 -25px 18px -14px inset, rgba(187, 44, 44, .25) 0 1px 2px, rgba(187, 44, 44, .25) 0 2px 4px, rgba(187, 44, 44, .25) 0 4px 8px, rgba(187, 44, 44, .25) 0 8px 16px, rgba(187, 44, 44, .25) 0 16px 32px;
+            transform: scale(1.05) rotate(-1deg);
+        }
+
+        .calcResp {
+            background-color: rgba(255,255,255,.75);
+            border-radius: .5em;
+            padding: .25em;
+        }
+    </style>
+</head>
+
+<body>
+    <svg style="display: none">
+        <filter id="liquid-refraction">
+            <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="2" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="20" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
+    <div class="calcCard">
+        <div Class="titleCard">
+            <h1>Rate End-Date Calculator</h1>
+        </div>
+        <form id="dateForm">
+            <div class="userEntry">
+                <label for="userDate">Choose a date:</label>
+                <div class="uInput">
+                    <input type="date" id="userDate" name="userDate" required>
+                </div>
+            </div>
+            <br><br>
+            <div class="buttons">
+                <button class="onGo" type="button" onclick="calculateValue()">Go!</button>
+                <button class="onReset" type="button" onclick="resetForm()">Reset</button>
+            </div>
+        </form>
+        <h3 class="calcResp" id="result">Rate End Date: </h3>
+    </div>
+
+
+    <script>
+        function resetForm() {
+            document.getElementById("dateForm").reset();
+            document.getElementById("result").textContent = "Rate End Date:";
+        }
+        function endOfMonth(date, monthsToAdd) {
+            // Move to the first day of the target month, then go to last day
+            return new Date(date.getFullYear(), date.getMonth() + monthsToAdd + 1, 0);
+        }
+
+        function calculateValue() {
+            // ISBLANK(C2)
+            const C2 = document.getElementById("userDate").value;
+            if (!C2) {
+                document.getElementById("result").textContent = "Please select a date first!";
+            }
+
+
+            //const date = new Date(C2);
+            const [year, month, dayNum] = C2.split("-").map(Number);
+            const date = new Date(year, month - 1, dayNum);
+
+
+            // C3 = C2 + 1 year
+            const C3 = new Date(date);
+            C3.setFullYear(C3.getFullYear() + 1);
+            const day = date.getDate(); // DAY(C2)
+            if (day === 1) {
+                // EOMONTH(C2, 11)
+                document.getElementById("result").textContent = "Rate End Date: " + endOfMonth(date, 11);
+            } else {
+                // EOMONTH(C3, 0)
+                document.getElementById("result").textContent = "Rate End Date: " + endOfMonth(C3, 0);
+            }
+        }
+    </script>
+</body>
